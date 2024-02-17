@@ -36,9 +36,9 @@ if ($Args.Count -gt 0) {
 }
 
 if ($devMode) {
-	go build -ldflags="-X 'main.DEBUGS=true' -X 'main.CONFIGS=${confpdev}'" -buildvcs=false -o $binp .
+	go build -ldflags="-X 'main.DEBUGS=true' -X 'main.CONFIGS=${confpdev}'" -o $binp .
 } else {
-	go build -buildvcs=false -o $binp .
+	go build -o $binp .
 }
 
 if ($LastExitCode -ne 0) {

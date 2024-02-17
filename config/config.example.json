@@ -22,7 +22,7 @@
 	"ntfy": {
 		"scheme": "https",
 		"server": "ntfy.sh",
-		"topic": "water/temperature",
+		"topic": "water",
 		"user": null,
 		"password": null,
 		"httpClient": {

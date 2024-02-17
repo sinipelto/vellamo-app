@@ -6,7 +6,6 @@
 			"label": "build workspace",
 			"command": "build",
 			"args": [
-				"-buildvcs=false",
 				"-o",
 				"./out/win_amd64.exe",
 				"."

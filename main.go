@@ -153,7 +153,6 @@ func main() {
 		// /api/v1 /area /hervanta-3 .geojson
 		path, _ = url.JoinPath(path, *config.Api.Area, *config.SensorName)
 		path += *config.GeoJsonSuffix
-		break
 	default:
 		logger.Panicln("ERROR: Api request type was not recognized. Was:", *config.RequestType)
 	}
@@ -214,20 +213,20 @@ func main() {
 		logger.Panicln("ERROR: Failed to unmarshal response body JSON to object:", err)
 	}
 
+	// TODO: measuredunits as array
+	// loop through
+	// check min max for each
+	// Optionally: map each unit to its own ntfy topic
 	var val float64
 	switch strings.ToLower(*config.MeasureUnit) {
 	case "t":
 		val = bodyObj.Properties.T
-		break
 	case "cl":
 		val = bodyObj.Properties.Cl
-		break
 	case "hardness":
 		val = bodyObj.Properties.Hardness
-		break
 	case "ph":
 		val = bodyObj.Properties.Ph
-		break
 	default:
 		logger.Panicln("ERROR: Target Measurement unit was not recognized. Was:", *config.MeasureUnit)
 	}
