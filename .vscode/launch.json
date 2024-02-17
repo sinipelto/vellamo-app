@@ -1,0 +1,18 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "GO Launch Package",
+      // "preLaunchTask": "build workspace",
+      "buildFlags": "-ldflags '-X main.DEBUGS=true -X main.CONFIGS=config/config.local.json' -buildvcs=false",
+      "type": "go",
+      "request": "launch",
+      "mode": "debug",
+      "args": [
+      ],
+      "console": "integratedTerminal",
+      "cwd": "${workspaceFolder}\\out",
+      "program": "${workspaceFolder}"
+    },
+  ]
+}

@@ -1,0 +1,32 @@
+{
+	"api": {
+		"scheme": "https",
+		"server": "vellamo.tampere.fi",
+		"base": "api/v1",
+		"area": "area",
+		"hourly": "hour",
+		"httpClient": {
+			"timeoutSec": 10,
+			"headers": {
+				"accept": "application/json"
+			}
+		}
+	},
+	"requestType": "area",
+	"areaName": "HERVANTA",
+	"sensorName": "hervanta-3",
+	"geojsonSuffix": ".geojson",
+	"alertMin": 6,
+	"alertMax": 6.5,
+	"measureUnit": "T",
+	"ntfy": {
+		"scheme": "https",
+		"server": "ntfy.sh",
+		"topic": "water/temperature",
+		"user": null,
+		"password": null,
+		"httpClient": {
+			"timeoutSec": 10
+		}
+	}
+}
